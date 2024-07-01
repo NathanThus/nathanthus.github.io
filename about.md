@@ -3,6 +3,8 @@ layout: post
 title: About
 ---
 
+![An avatar of a man with long hair and a graphic skull T-Shirt.](assets/images/favicon/NathanAvatar.png)
+
 # Embedded Systems | Game Development
 
 I'm a professional Embedded Systems and Game Developer, skilled in C, C++, and C#. My expertise extends to Arduino, ESP32, and STM for Embedded Systems, and Unity for Game Development.
