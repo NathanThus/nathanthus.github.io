@@ -5,97 +5,61 @@ navbar_entries:
   - title: blog
     url: blog
 
-  - title: website
-    url: https://www.abhinav.co
-
 project_entries:
-  - title: Project 1
-    url: overview-post
-    desc: This is an example project, configured in _data/home.yml
+  - title: Rogue Anomaly
+    url: https://github.com/RobinvHoof/Rogue-Anomaly
+    desc: My first Game Development group project and game jam. An FPS Rouge-Like Dungeon Crawler, where the player uses spells and firearms to fight their way to the end.
+    # - title: Example Project
+    # url: URLGoesHere
+    # desc: This is an example project, configured in _data/home.yml
 
-  - title: Project 2
-    url: overview-post
-    desc: Projects are shown in card layout
+    # - title: Project 4
+    #   url: overview-post
+    #   desc: This project uses highlight markup, configured in _data/home.yml
+    #   highlight: WIP
 
-  - title: Project 3
-    url: overview-post
-    desc: You can control visibility from _config.yml file
+  - title: Black Sails At Midnight
+    url: https://github.com/Black-Sails-at-Midnight/Black-Sails-at-Midnight
+    desc: First Person Shooter Tower Defense Hybrid, set in the golden age of piracy. Send out your own fleet to combat the english, or board their ships and take them down yourself.
 
-  - title: Project 4
-    url: overview-post
-    desc: This project uses highlight markup, configured in _data/home.yml
+  - title: Het Verborgen Oog
+    url: https://github.com/orgs/Het-verborgen-oog/repositories
+    desc: Refactoring of an endlessly looping game, running at "De Ontdek Fabriek". The player uses a mechanical dolphin to control the character.
+
+  - title: FindIt
+    url: https://github.com/T3-FindIt
+    desc: FindIt is an Embedded Systems project, which aims to make finding anything in your collection just a little bit easier. Using NFC tags, you can create your own modular storage system, showcasing where you left that last item you needed.
+
+  - title: Animated Text
+    url: https://github.com/NathanThus/Animated-Text
+    desc: A simple framework for animating TextMeshPro Elements in Unity. Inspired by the RuneScape Text Chat!
+
+  - title: Mass Defence
+    url: https://github.com/NathanThus/Mass-Defence
+    desc: A Tower-Defence game, built upon Entity-Component-Systems.
     highlight: WIP
 
-  - title: Project 5
-    url: overview-post
-    desc: Moonwalk also has horizontal list (used in header and footer)
-    highlight: WIP
-
-  - title: Project 6
-    url: overview-post
-    desc: It also has a scalable vertical list (in case you need it)
-
-old_project_entries:
-  - title: Soopr
-    url: https://www.soopr.co
-    desc: Delight your readers - add beautiful share and like buttons easily to your websites 
-    highlight: NEW
-
-  - title: Cookie
-    url: https://github.com/abhinavs/cookie
-    desc: An open source landing website with supporting pages and integrated blog
-
-  - title: Moonwalk
-    url: https://github.com/abhinavs/moonwalk
-    desc: A fast and minimalist Jekyll blog theme with clean dark mode
-
-  - title: Humangous
-    url: https://www.humangous.co
-    desc: The better people know you, the better they collaborate
-
-footer_entries:
-  - title: abhinav's homepage
-    url: https://www.abhinav.co
-
-  - title: twitter
-    url: https://twitter.com/abhinav
-
-  - title: github
-    url: https://github.com/abhinavs
-
-  - title: feed
-    url: feed.xml
 
 misc_entries:
-  - title: this is an example vertical list
-    url: false
-
-  - title: you can show or hide using a boolean flag in _config.yml
-    url: false
-
-  - title: and you can add data in _data/home.yml
-    url: false
 
   - title: Blog posts
     post_list: true
     url: false
 
-  - title: moonwalk on the Internet
-    url: false
-    entries:
-      - title: on Github
-        url: https://github.com/abhinavs/moonwalk
-
-      - title: originally built for abhinav's homepage
-        url: https://www.abhinav.co
-
-      - title: this list is scalable and can be nested
-        url: false
-        entries:
-          - title: this is nested inside a nested list
-            url: false
-
-          - title: it is easy to use, see _data/home.yml to see how to configure it.
-            url: false
+old_project_entries:
+  - title: InMotion VR | Game Developer Intern
+    url: https://corpusvr.com/
+    desc: Worked on a prototype game for InMotionVR, combining Embedded Systems & VR.
+    highlight: NEW
 
 
+footer_entries:
+
+  - title: Github
+    url: https://github.com/NathanThus
+
+  - title: LinkedIn
+    url: https://www.linkedin.com/in/nathan-thus-20b11526b/
+  
+  - title: E-Mail
+    url: mailto:contact@nathanthus.games
