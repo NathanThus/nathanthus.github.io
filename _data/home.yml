@@ -34,11 +34,10 @@ project_entries:
     url: https://github.com/NathanThus/Animated-Text
     desc: A simple framework for animating TextMeshPro Elements in Unity. Inspired by the RuneScape Text Chat!
 
-  - title: Mass Defence
-    url: https://github.com/NathanThus/Mass-Defence
-    desc: A Tower-Defence game, built upon Entity-Component-Systems.
-    highlight: WIP
-
+  - title: Crusadeon
+    url: https://github.com/Rogue-Ape-Studios/Crusader
+    desc: An action packed rogue-lite, blending item progression and ability loadouts in the forgotten northern crusades.
+    highlight: LATEST
 
 misc_entries:
 
