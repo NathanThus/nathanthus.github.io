@@ -51,6 +51,10 @@ old_project_entries:
     desc: Worked on a prototype game for InMotionVR, combining Embedded Systems & VR.
     highlight: NEW
 
+  - title: Minor Embedded Systems & Signals
+    url: https://github.com/NathanThus/Minor-Embedded-Systems/tree/develop
+    desc: My portfolio for the minor embedded systems & signals. PCB Design and more included!
+    highlight: MINOR
 
 footer_entries:
 
