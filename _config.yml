@@ -2,8 +2,9 @@ title: Nathan Thus
 author: Nathan Thus
 url: https://www.nathanthus.games # root address of the site
 description: > # description of the site (multiple lines allowed)
-  My Portfolio website, for all my projects.
-
+  My Portfolio website, for all my projects, whether it's Game Development or Embedded.   
+  
+  Click on any of the tabs to check them out!
 permalink: /:slug
 
 favicon: "./logo.png" # relative path to site's favicon
