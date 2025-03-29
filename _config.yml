@@ -1,47 +1,99 @@
-title: Nathan Thus
-author: Nathan Thus
-url: https://www.nathanthus.games # root address of the site
-description: > # description of the site (multiple lines allowed)
-  My Portfolio website, for all my projects, whether it's Game Development or Embedded.   
-  
-  Click on any of the tabs to check them out!
-permalink: /:slug
+### Site Settings ###
+title               : Portfolio
+description         : >-
+                      Turning coffee :coffee: into :man_technologist: code, :video_game: games and :screwdriver: projects.
+baseurl             : ""            # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
+# repository          : yousinix/portfolYOU      # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
+remote_theme        : yousinix/portfolYOU
+open_new_tab        : false                    # Opens external URLs in new tab (works for posts, projects and navbar only)
 
-favicon: "./logo.png" # relative path to site's favicon
 
-#theme: moonwalk # if you are using GitHub Pages, change it to remote_theme: abhinavs/moonwalk
-remote_theme: abhinavs/moonwalk
-
-theme_config:
-  appearance: "dark" # can be "light", "dark" or "auto"
-  appearance_toggle: true # if appearance can be switched by user
-  back_home_text: "home.." # customize text for homepage link in post layout
-  date_format: "%d-%m-%Y" # customize how date is formatted
-  show_description: true # show blog description
-  show_navbar: true # show horizontal navbar
-  show_footer: true # show footer links in home page,add in _data/home.yml
-  show_copyright: true # show copyright notice in footer
-  # following keys are using to create home layout
-  show_projects: true # show projects as cards, add in _data/home.yml
-  show_old_projects: true # show old projects as cards, add in _data/home.yml
-  show_blog: true # show blog posts added in _posts
-  show_misc_list: false # show generic vertical list for misc details, add _data/home.yml
-  show_reading_time: false # show number of words and reading time in the blog posts
-  show_tags: true # show tags in a blog posts
-  # options for "home" page
-  home:
-    title_projects: Recent Projects
-    title_old_projects: Work Experience
-    title_blog: Blog Posts
-
-soopr:
-  publish_token: "" # sign up at https://www.soopr.co to get your publish token and personalize share and reaction options
-
-highlighter: rouge
-
-sass:
-  style: :compressed
-
+### Plugins ###
 plugins:
-  - jekyll-feed
-  - jekyll-soopr-seo-tag
+  - jemoji
+
+
+### Navbar Settings ###
+nav_exclude:                                            # The following paths are excluded from navbar
+  - pages/tags.html
+  - pages/404.html
+  - pages/index.md
+
+### Author Info ###
+author:
+  name              : Nathan  Thus
+  image             : https://avatars.githubusercontent.com/u/99728206?v=4
+# behance           : your_username
+# dribbble          : your_username
+  email             : contact@nathanthus.games
+# facebook          : your_username
+  github            : NathanThus
+# gitlab            : your_username
+# instagram         : your_username
+# kaggle            : your_username
+  linkedin          : nathan-thus-20b11526b
+# medium            : your_username
+# soundcloud        : your_username
+# spotify           : your_username
+# stackoverflow     : your_user_id
+# tumblr            : your_username.tumblr.com
+# twitch            : your_username
+# twitter           : your_username
+# vimeo             : your_username
+# youtube           : your_channel_name
+# keybase           : your_username
+
+
+### Posts ###
+permalink: /blog/:title
+
+
+### Collections ###
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name
+
+
+### Disqus ###
+#disqus:
+#  shortname: your-short-name-disqus                     # Your website Shortname on disqus
+
+
+### Analytics ###
+analytics:
+  enabled: false                                        # Set true to enable analytics
+  google:
+    tracking_id: your-google-tracking-id
+
+
+### Buy me a coffee ###
+# See https://www.buymeacoffee.com/
+buymeacoffee:
+  enabled: false
+  username: your_username
+  color: "#007bff"
+  message: "Thank you for visiting."                    # Message to be displayed aside from the button for a few seconds.
+  description: "Support me on Buy me a coffee!"
+
+
+### Defaults for collections ###
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      comments: false                                   # Set to true to enable disqus comments
+
+
+### Exclude from processing ###
+exclude:
+  - README.md
+  - CONTRIBUTING.md
+  - LICENSE
+  - "*.log"
