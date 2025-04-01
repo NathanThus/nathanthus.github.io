@@ -98,3 +98,4 @@ exclude:
   - LICENSE
   - "*.log"
   - Templates
+  - vendor 
