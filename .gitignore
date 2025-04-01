@@ -1,9 +1,12 @@
-*.env
-_site
-.sass-cache
-.jekyll-cache
+# Local Site Directories
+_site/
+.sass-cache/
+.jekyll-cache/
 .jekyll-metadata
-vendor
-*.gem
+
+# Ruby Gems
 .bundle
-liveview.bat
+Gemfile.lock
+
+# Log Files
+*.log

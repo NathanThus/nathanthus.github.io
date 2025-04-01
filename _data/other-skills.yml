@@ -1,0 +1,11 @@
+- name: GitHub/GitLab
+  percentage: 80
+  color: 
+
+- name: KiCad
+  percentage: 30
+  color: 
+
+- name: Word/Excel/Powerpoint
+  percentage: 90
+  color: 
