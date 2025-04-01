@@ -1,10 +1,22 @@
-- name: Unity/C#
-  percentage: 90
-  color: danger
-
-- name: Embedded Systems/C/C++
+- name: Unity
   percentage: 80
+  color: 
+
+- name: C#
+  percentage: 70
+  color: 
+
+- name: Embedded Systems
+  percentage: 70
   color:
+
+- name: C/C++
+  percentage: 60
+  color:
+
+- name: MATLAB/Octave
+  percentage: 40
+  color: 
 
 #- name: Python
   percentage: 70
