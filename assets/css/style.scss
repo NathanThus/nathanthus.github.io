@@ -3,6 +3,7 @@
 @import "portfolYOU";
 
 .link-after, .nav-link::after, .navbar-brand::after, .nav-item.active::after { content: ""; display: block; height: 0.15em; background: #ff0000; }
+a.bg-primary:focus, a.bg-primary:hover, button.bg-primary:focus, button.bg-primary:hover {	background-color: #cc0000 !important; transition: ease-in-out 0.3s;}
 
 .timeline-body { position: relative; border-radius: 0 15px 15px 0; padding: 5px 0; }
 .timeline-body:after { content: ""; width: 4px; height: 100%; background-color: #ff0000; position: absolute; left: -4px; top: 0; }
@@ -21,7 +22,7 @@
 .btn-outline-primary:hover {color: #aa0000 !important; border-color: #aa0000 !important; background-color: #ff0000;}
 
 .border-primary {border-color: #a00101 !important;}
-.bg-primary {background-color: #a00101 !important;}
+.bg-primary {background-color: #a00101 !important; transition: ease-in-out 0.3s;}
 
 // .markdown-body a:not(.btn):not([class^="carousel-"]):not([class^="list-"]):not(.no-underline):hover { color: #ff0000 !important; }
 a li {color: #ff0000 !important;}
