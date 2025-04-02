@@ -11,13 +11,9 @@
   color:
 
 - name: C/C++
-  percentage: 60
+  percentage: 50
   color:
 
 - name: MATLAB/Octave
-  percentage: 40
+  percentage: 30
   color: 
-
-#- name: Python
-  percentage: 70
-  color: secondary
