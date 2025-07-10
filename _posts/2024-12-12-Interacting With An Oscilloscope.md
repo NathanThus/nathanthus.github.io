@@ -200,3 +200,8 @@ There is one quite distinct advantage over the USB stick approach. **You don't n
 Honestly, this was an insane amount of fun. I've learned about a new protocol, managed to tinker with some interesting tooling and overall, just had a blast. I'm definitely far more familiar and comfortable with the programming side of embedded systems, that's for sure. Still, I'll want to improve the other aspects of the Embedded Systems field with my main project, the Game Controller, for which I built this tool in the first place.
 
 I might add a few more things, and improve the overall program if Fontys wants to actually use it as tooling, but that's a matter for another day.
+
+## Copyright Notice
+
+I do not consent for the use of this article, or any other webpage, to be used by AI for training purposes.
+© 2025 Nathan Thus. All rights reserved.
