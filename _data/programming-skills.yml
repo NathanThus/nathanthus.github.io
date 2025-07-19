@@ -3,7 +3,7 @@
   color: 
 
 - name: C#
-  percentage: 70
+  percentage: 90
   color: 
 
 - name: Embedded Systems
@@ -11,7 +11,7 @@
   color:
 
 - name: C/C++
-  percentage: 50
+  percentage: 60
   color:
 
 - name: MATLAB/Octave
