@@ -1,5 +1,13 @@
 ---
 ---
+a li {color: #ff0000 !important;}
+p a {color:#ff0000 !important}
+table a { color: #ff0000 !important; }
+th  { background-color: #3f3f3f !important; }
+.markdown-body a:not(.btn):not([class^="carousel-"]):not([class^="list-"]):not(.no-underline):hover { color: #ff0000 !important; }
+.markdown-body a:not(.btn):not([class^="carousel-"]):not([class^="list-"]):not(.no-underline)::after { background: #ff0000 !important;}
+
+
 @import "portfolYOU";
 
 .link-after, .nav-link::after, .navbar-brand::after, .nav-item.active::after { content: ""; display: block; height: 0.15em; background: #ff0000; }
@@ -25,7 +33,5 @@ a.bg-primary:focus, a.bg-primary:hover, button.bg-primary:focus, button.bg-prima
 .bg-primary {background-color: #a00101 !important; transition: ease-in-out 0.3s;}
 
 // .markdown-body a:not(.btn):not([class^="carousel-"]):not([class^="list-"]):not(.no-underline):hover { color: #ff0000 !important; }
-a li {color: #ff0000 !important;}
-p a {color:#ff0000 !important}
-table a { color: #ff0000 !important; }
+
 
