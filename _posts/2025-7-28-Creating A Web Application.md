@@ -1,6 +1,6 @@
 ---
 title: Creating A Web Application
-tags: [Embedded, C++, C#, React, SQL, POSTGRES]
+tags: [Embedded, C++, C#, React, SQL, POSTGRES, Learning]
 style: fill
 color: secondary
 description: Learning about databases, REST API's and Single-Page-Application on the web.
@@ -12,15 +12,13 @@ The goal for this project is fairly simple. I want to create a database, with ac
 
 ## Databases - Been a while, crocodile
 
-Let's start by making sure that once the system is all up and running, we can actually store and retrieve the data. This means setting up a database, alongside some form of REST API. After talking to some people that are far more acquainted in this field than I am, they advised me to take a peek at [postgresSQL](https://www.postgresql.org/). This is an object-relational database, which would be useful in future projects, and the relationships would make more sense in complex code projects for me, especially since my experience with MariaDB was less than stellar in the past.
+Let's start by making sure that once the system is all up and running, we can actually store and retrieve the data. This means setting up a database, alongside some form of REST API. After doing some research related to the different databases available, I decided to take a peek at [postgresSQL](https://www.postgresql.org/). This is an object-relational database, which would be useful in future projects, and the relationships would make more sense in complex code projects for me, especially since my experience with MariaDB was less than stellar in the past.
 
-Installation was a breeze, but I was slightly confused on how to actually make the tables. Turns out, they are called Schemas instead. Logical.
-
-After finding out they are called schemas, I setup the columns with a timezoned timestamp, to act as my primary key, while the value column would be a random value. I did discover the `smallint` variable later, but I was a bit further into the project by that stage and was not planning on changing it. I did end up applying it to the weather schema though.
+Once I installed postgresSQL, and creating a new schema (the internal name for table), I setup the columns with a timezoned timestamp, to act as my primary key, while the value column would be a random value. I did discover the `smallint` variable later, but I was a bit further into the project by that stage and was not planning on changing it. I did end up applying it to the weather schema though.
 
 ![A working database.](../assets/Articles/WebApp/postgresDBRandomTest.png)
 
-With some basic columns setup, it was time to face my fears and take a peek at making a REST API. My experience with that has been dreadful in the past, with a lot of manual routing. Turns out, I was handicapping myself unknowingly. Turns out, there is a program that actually does **all the work for you**, provided you configured your schema with some modicum of care: [POSTREST](https://docs.postgrest.org/en/v13/). Alternatively, I could have used something like [Django](https://www.djangoproject.com/) or [Node JS](https://nodejs.org/en), but I opted to spare myself some tedium and focus on integration, rather than hard-coded development.
+With some basic columns setup, it was time to take a peek at making a REST API. My knowledge, at least starting this project, was that REST API's required a lot of manual routing. Turns out, there are programs that actually do **all the work for you**, provided you configured your schema with some modicum of care, like [POSTREST](https://docs.postgrest.org/en/v13/). Alternatively, I could have used something like [Django](https://www.djangoproject.com/) or [Node JS](https://nodejs.org/en), but I opted to spare myself some tedium and focus on integration, rather than hard-coded development.
 
 POSTREST works by taking your database as the source of truth for **everything**. Defaults, permissions and any other configuration that would usually be handled externally via controllers, now stems explicitly from the database. Less work for me, while still teaching me a few things, my favourite. With that in mind, I decided to setup some basic permissions for my database. I experimented with some permissions, even creating an API key in the end for use in some tests, but ended up going easy on myself and simply giving anonymous users read and insert permissions.
 
@@ -118,7 +116,7 @@ Seeing as the AHT20 does use an I2C interface, I dove into the possibility of cr
 
 Despite that, with some error handling later,  the sensor was sending data over the web towards my database.
 
-## Web Applications - Oh dear
+## Web Applications - All of the JavaScript
 
 Now, the final piece of the puzzle: the web application. Having developed a bit of HTML/CSS/JavaScript in the past, I opted to skip the barebones stage and implement a front-end framework. For this, I opted to use [React](https://react.dev/). Not only can it handle full-stack (with Next.JS), it can additionally be used for creating mobile apps, allowing me to pivot into that side of the development in  the future, or at least making the step slightly easier.
 
@@ -142,4 +140,4 @@ With the successful creation of the web application, I have completed the projec
 
 Learning to apply REST queries to C# and C/C++ has been incredibly insightful, as this will give me more opportunities in the future to create, store and manipulate data in new ways, like working with the [Twitch API](https://dev.twitch.tv/docs/api/reference/).
 
-And finally, the part which I anticipated to actually take the longest, the web application. Going in, my experience with web-dev was always one of figuring out the basics and still failing spectacularly. My previous attempts at developing a website definitely proved that, hence me switching to Jekyll for automatically building them. Though in fairness, it has become significantly easier, and it didn't take long for me to remember how HTML/CSS and JavaScript co-existed, resulting in a faster turn around. I'll probably stick to Single-Page-Applications, as I am far from a qualified Full-Stack Developer, but nevertheless it's an interesting foray into creating web applications.
+And finally, the part which I anticipated to actually take the longest, the web application. There's a reason I chose Jekyll for automatically building my website, mainly due to the fact that's it's very easy to just drop in data. With some previous experience, it didn't take long for me to remember how HTML/CSS and JavaScript co-existed, resulting in a faster turn around. I'll probably stick to Single-Page-Applications, but nevertheless it's an interesting foray into creating web applications.
