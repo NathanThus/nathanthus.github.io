@@ -1,6 +1,6 @@
 ---
 title: Interacting With VISACOM
-tags: [Embedded, C++, C, MATLAB]
+tags: [Embedded, C++, C, MATLAB, Learning]
 style: fill
 color: primary
 description: Learning about communicating with scientific equipment over VISACOM.

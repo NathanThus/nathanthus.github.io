@@ -1,17 +1,17 @@
 - name: Unity
-  percentage: 80
+  percentage: 100
   color: 
 
 - name: C#
-  percentage: 90
+  percentage: 100
   color: 
 
 - name: Embedded Systems
-  percentage: 70
+  percentage: 80
   color:
 
 - name: C/C++
-  percentage: 60
+  percentage: 80
   color:
 
 - name: MATLAB/Octave
