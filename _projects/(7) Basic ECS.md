@@ -1,7 +1,7 @@
 ---
 name: Basic Entity-Component-Systems Project
 tools: [Unity, C#, DOTS, ECS]
-image: https://private-user-images.githubusercontent.com/99728206/343729076-58606159-2b74-4221-811c-34cc23e4de47.gif?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTUwMTQ2MjcsIm5iZiI6MTc1NTAxNDMyNywicGF0aCI6Ii85OTcyODIwNi8zNDM3MjkwNzYtNTg2MDYxNTktMmI3NC00MjIxLTgxMWMtMzRjYzIzZTRkZTQ3LmdpZj9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA4MTIlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwODEyVDE1NTg0N1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTg5NTJhMjY1NjY3MDY3ZWZjMGZiODAwOTYwYTNhM2UwMzUyOGYwMmQ1ZjcxYWU0YTEyZTJmZGRhNTgzY2E4YzcmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.V5U-gJMAsqSWWKNlRwpwWRzypcPg0c165d3UkeDhrGE
+image: ../assets/Projects/337674396-81dc9930-0820-42c5-88f7-ba079badd737.gif
 description:   A basic ECS demo, using the unity tutorial. 
 external_url: https://github.com/NathanThus/basic-ecs
 ---
