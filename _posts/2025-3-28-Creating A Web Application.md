@@ -118,13 +118,11 @@ Despite that, with some error handling later,  the sensor was sending data over 
 
 ## Web Applications - All of the JavaScript
 
-Now, the final piece of the puzzle: the web application. Having developed a bit of HTML/CSS/JavaScript in the past, I opted to skip the barebones stage and implement a front-end framework. For this, I opted to use [React](https://react.dev/). Not only can it handle full-stack (with Next.JS), it can additionally be used for creating mobile apps, allowing me to pivot into that side of the development in  the future, or at least making the step slightly easier.
+Now, the final piece of the puzzle: the web application. Having developed HTML/CSS/JavaScript in the past, I opted to skip the barebones stage and implement a front-end framework. For this, I opted to use [React](https://react.dev/). Not only can it handle full-stack (with Next.JS), it can additionally be used for creating mobile apps, allowing me to pivot into that side of the development in the future, or at least making the step slightly easier.
 
-With some minor hiccups during installation (admittedly, the problem sat between the desk and the chair), I created a basic React project and hosted it for live editing. Now, onto the fun part: integrating charts.
+[Chart.Js](https://www.chartjs.org/) is a JavaScript framework that allows developers to add highly configurable charts to their webpages, to showcase statistics. With various chart types, inherent responsive support for different window sizes and (if I could be bothered) animations, it seemed like a solid choice for getting a chart on my website.
 
-[Chart.Js](https://www.chartjs.org/) is a JavaScript framework that allows developers (that includes me) to add highly configurable charts to their webpages, to showcase statistics. With various chart types, inherent responsive support for different window sizes and (if I could be bothered) animations, it seemed like a solid choice for getting a chart on my website.
-
-Step one was integrating the sample Line-Chart from their website into react! This took some tweaking and understating the way that React **actually** renders the web page. Yeah, turns out that does not happen sequentially like I anticipated, silly me. With some hardcoding for now, I managed to get the following chart to show up:
+Step one was integrating the sample Line-Chart from their website into react! This took some tweaking and understating the way that React **actually** renders the web page. Turns out that does not happen sequentially like I anticipated, silly me. With some hardcoding for now, I managed to get the following chart to show up:
 
 ![Chart with junk data](../assets/Articles/WebApp/BasicWebChart.png)
 *Junk data, but it's data!*
@@ -136,8 +134,8 @@ As it turns out, the key to getting the data from my database to show up in my c
 
 ## Conclusion
 
-With the successful creation of the web application, I have completed the project, while learning many, many things. Database design can be a nightmare, but it depends wholly on what system you use for creating it. Personally, I'll probably stick with POSTGRESQL, though I'll try out Node.JS or Django for the REST API at some point. I was certainly not expecting setting up the database to take up the **majority** of the time of this project, but I didn't seem to have the same affinity with it. Though in fairness, it has been over four years since I last touched anything to do with databases in any significant capacity.
+With the successful creation of the web application, I have completed the project, while learning many, many things. Database design can be a nightmare, but it depends wholly on what system you use for creating it. Personally, I'll probably stick with POSTGRESQL for personal projects, though I'll try out Node.JS or Django for the REST API at some point. I was certainly not expecting setting up the database to take up the **majority** of the time of this project, but I didn't seem to have the same affinity with it. Though in fairness, it has been a bit since I last dealt with databases, seeing as I opted to pivot into Game Design and Embedded Systems.
 
-Learning to apply REST queries to C# and C/C++ has been incredibly insightful, as this will give me more opportunities in the future to create, store and manipulate data in new ways, like working with the [Twitch API](https://dev.twitch.tv/docs/api/reference/).
+Learning to apply REST queries to C# and C/C++ has been incredibly insightful, as this will give me more opportunities in the future to create, store and manipulate data in new ways, like working with the [Twitch API](https://dev.twitch.tv/docs/api/reference/). While I had some experience using Node RED for Internet of Things development, it was a nice refresher course.
 
-And finally, the part which I anticipated to actually take the longest, the web application. There's a reason I chose Jekyll for automatically building my website, mainly due to the fact that's it's very easy to just drop in data. With some previous experience, it didn't take long for me to remember how HTML/CSS and JavaScript co-existed, resulting in a faster turn around. I'll probably stick to Single-Page-Applications, but nevertheless it's an interesting foray into creating web applications.
+And finally, the part which I anticipated to actually take the longest, the web application. There's a reason I chose Jekyll for automatically building my website, mainly due to the fact that's it's very easy to just drop in data. With my previous experience, it didn't take long for me to remember the basics, resulting in a faster turn around. I'll probably stick to Single-Page-Applications, but nevertheless it's an interesting foray into creating web applications.
