@@ -6,9 +6,9 @@ color: secondary
 description: Learning about databases, REST API's and Single-Page-Application on the web.
 ---
 
-## The Concept
+# The Concept
 
-The goal for this project is fairly simple. I want to create a database, with accompanying embedded and web-application, to train my skills in these fields to open new opportunities for projects, alongside expanding my knowledge into REST API's. The database will consist of two tables, one which contains random values, while the other contains actual weather data gathered from a sensor.
+The goal for this project is fairly simple. I want to create a database, with accompanying embedded and web-application, to practice my skills in these fields, alongside expanding my knowledge into REST API's. The database will consist of two tables, one which contains random values, while the other contains actual weather data gathered from a sensor. It's been a bit since I last worked with fullstack development, and most of my experience came from Entity Framework, MariaDB and MVC.
 
 ## Databases - Been a while, crocodile
 
@@ -20,7 +20,7 @@ Once I installed postgresSQL, and creating a new schema (the internal name for t
 
 With some basic columns setup, it was time to take a peek at making a REST API. My knowledge, at least starting this project, was that REST API's required a lot of manual routing. Turns out, there are programs that actually do **all the work for you**, provided you configured your schema with some modicum of care, like [POSTREST](https://docs.postgrest.org/en/v13/). Alternatively, I could have used something like [Django](https://www.djangoproject.com/) or [Node JS](https://nodejs.org/en), but I opted to spare myself some tedium and focus on integration, rather than hard-coded development.
 
-POSTREST works by taking your database as the source of truth for **everything**. Defaults, permissions and any other configuration that would usually be handled externally via controllers, now stems explicitly from the database. Less work for me, while still teaching me a few things, my favourite. With that in mind, I decided to setup some basic permissions for my database. I experimented with some permissions, even creating an API key in the end for use in some tests, but ended up going easy on myself and simply giving anonymous users read and insert permissions.
+POSTREST works by taking your database as the source of truth for **everything**. Defaults, permissions and any other configuration that would usually be handled externally via controllers, now stems explicitly from the database. Less work for me, while still helping me remember a few things. With that in mind, I decided to setup some basic permissions for my database. I experimented with some permissions, even creating an API key in the end for use in some tests, but ended up going easy on myself and simply giving anonymous users read and insert permissions.
 
 ![A JSON return showing that permissions were denied.](../assets/Articles/WebApp/DeniedPermsAsIntended.png)
 *No permission to post. Working as intended.*
@@ -31,7 +31,7 @@ Requesting **all** the data in the database went well, and gave me this giant JS
 
 Well, as it turns out, I forgot to add some defaults, resulting in my timestamp being non-existent for my first attempt at using `curl -X POST http://localhost:3000/randomtest`.
 ![A JSON entry with a NULL timestamp](../assets/Articles/WebApp/NoDefault.png)
-*I knew I forgot something...*
+*Ah, yes, a time of NULL*
 
 As it turns out, for timestamps, you can actually just set the default timestamp as `TIMESTAMP_NOW()`, after which it will just insert the current timestamp. Neat. One call of `curl` later with a valid payload:
 ![A valid JSON with Timestamp](../assets/Articles/WebApp/WithDefault.png)
@@ -49,7 +49,7 @@ I frequently just opted to use `PGAdmin4` and `POSTREST`, as `PGAdmin4` already 
 
 ## Desktop Applications - Dusting off WinForms
 
-After finishing and testing the database, I opted to create a little program to help me learn API calls in C#, as well as having a more user friendly interface for reading and inserting data into the random schema. Sadly, there wasn't much to note here, as it was all fairly straight forward after having typed out `curl -X POST http://localhost:3000/randomtest -H "Content-Type: application/json" -d "{\"value\": \"42\"}` often enough for my fingers to move on their own at a certain stage.
+After finishing and testing the database, I opted to create a little program to do some API calls in C#, as well as having a more user friendly interface for reading and inserting data into the random schema. Sadly, there wasn't much to note here, as it was all fairly straight forward after having typed out `curl -X POST http://localhost:3000/randomtest -H "Content-Type: application/json" -d "{\"value\": \"42\"}` often enough for my fingers to move on their own at a certain stage.
 
 Setting up the connection:
 
@@ -100,6 +100,7 @@ With some help from my good old friend `WinForm`, this game me this lovely littl
 ![A Winform showing JSON data being sent.](../assets/Articles/WebApp/CSharpClientSuccess.png)
 
 ## Embedded - ESP32 my beloved
+
 For the embedded side, I had two requirements, namely wireless connectivity for connection purposes, alongside a sensor capable of measuring temperature and humidity with moderate accuracy. For the wireless implementation, an old trusted friend in the form of the ESP32 once again proved the economical and easy choice. While I could have opted for the DHT11, a **very** common temperature/humidity sensor found in practically any computer lab that offers arduino courses, I chose the AHT20 for it's accuracy. I put the data in a table below for easy viewing.
 
 | Characteristic | [AHT20](https://asairsensors.com/wp-content/uploads/2021/09/Data-Sheet-AHT20-Humidity-and-Temperature-Sensor-ASAIR-V1.0.03.pdf) | [DHT11](https://www.mouser.com/datasheet/2/758/DHT11-Technical-Data-Sheet-Translated-Version-1143054.pdf) |
@@ -112,22 +113,22 @@ For the embedded side, I had two requirements, namely wireless connectivity for 
 ![The AHT20](https://www.espboards.dev/img/WyVIgv26Ww-200.avif)
 *What a cute little sensor board! ~~Totally won't reverse engineer this at some point~~*
 
-Seeing as the AHT20 does use an I2C interface, I dove into the possibility of creating a simple I2C library. Turns out that someone already made one, and thus it was delicately incorporated into my project. While setting up the Wire and HTTP connection wasn't hard, as it turns out Arduino C has some interesting implementations of the `String` class, meaning that the payload functionality had to be split into multiple lines of appending data, despite me attempting explicit string casts.
+Seeing as the AHT20 does use an I2C interface, I dove into the possibility of creating a simple I2C library. Turns out that someone already made one, and thus it was delicately incorporated into my project. While setting up the Wire and HTTP connection wasn't hard, as it turns out Arduino C has some interesting implementations of the `String` class, meaning that the payload functionality had to be split into multiple lines of appending data, despite me attempting explicit string casts. I have done REST/CRUD during a fair chunk of my tenture, though mainly via NODE RED.
 
 Despite that, with some error handling later,  the sensor was sending data over the web towards my database.
 
 ## Web Applications - All of the JavaScript
 
-Now, the final piece of the puzzle: the web application. Having developed HTML/CSS/JavaScript in the past, I opted to skip the barebones stage and implement a front-end framework. For this, I opted to use [React](https://react.dev/). Not only can it handle full-stack (with Next.JS), it can additionally be used for creating mobile apps, allowing me to pivot into that side of the development in the future, or at least making the step slightly easier.
+I chose to build the web application using [React](https://react.dev/), a front-end framework I'm already familiar with from past projects using HTML, CSS, and JavaScript.
 
-[Chart.Js](https://www.chartjs.org/) is a JavaScript framework that allows developers to add highly configurable charts to their webpages, to showcase statistics. With various chart types, inherent responsive support for different window sizes and (if I could be bothered) animations, it seemed like a solid choice for getting a chart on my website.
+[Chart.Js](https://www.chartjs.org/) is a JavaScript framework that allows developers to add highly configurable charts to their webpages, to showcase statistics. With various chart types, inherent responsive support for different window sizes and (if I really wanted to) animations, it seemed like a solid choice for getting a chart on my website.
 
-Step one was integrating the sample Line-Chart from their website into react! This took some tweaking and understating the way that React **actually** renders the web page. Turns out that does not happen sequentially like I anticipated, silly me. With some hardcoding for now, I managed to get the following chart to show up:
+Step one was integrating the sample Line-Chart from their website into React! This took some tweaking and understating the way that React **actually** renders the web page. Turns out that does not happen sequentially like I'm used to. With some hardcoding for now, I managed to get the following chart to show up:
 
 ![Chart with junk data](../assets/Articles/WebApp/BasicWebChart.png)
 *Junk data, but it's data!*
 
-As it turns out, the key to getting the data from my database to show up in my chart was to make use of React's [UseEffect](https://react.dev/reference/react/useEffect). This is a hook that allows me to synchronise the rendering of my chart with the result of my own database. Setting the empty array parameter meant that it would only run on the first render, which is perfectly fine, as it doesn't need to update live. After briefly remembering that the [map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) function works **exceptionally** well with JSON's, compared to me manually programming a bunch of foreach loops, the data was quickly sorted into the correct arrays for display. With that all said and done, **the chart below, running in a web-application with data from a live server** was successfully completed!
+As it turns out, the key to getting the data from my database to show up in my chart was to make use of React's [UseEffect](https://react.dev/reference/react/useEffect). This is a hook that allows me to synchronise the rendering of my chart with the result of my own database. Setting the empty array parameter meant that it would only run on the first render, which is perfectly fine, as it doesn't need to update live. After briefly remembering that thae [map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) function works **exceptionally** well with JSON's, compared to me manually programming a bunch of foreach loops, the data was quickly sorted into the correct arrays for display. With that all said and done, **the chart below, running in a web-application with data from a live server** was successfully completed!
 
 ![Chart with Temperature and Humidity Data](<../assets/Articles/WebApp/Working Webapp.png>)
 *And the weather outside is mild, but the humidity is oh so wild, and since we've no place to go, let me code let me code let me code~*
@@ -136,6 +137,6 @@ As it turns out, the key to getting the data from my database to show up in my c
 
 With the successful creation of the web application, I have completed the project, while learning many, many things. Database design can be a nightmare, but it depends wholly on what system you use for creating it. Personally, I'll probably stick with POSTGRESQL for personal projects, though I'll try out Node.JS or Django for the REST API at some point. I was certainly not expecting setting up the database to take up the **majority** of the time of this project, but I didn't seem to have the same affinity with it. Though in fairness, it has been a bit since I last dealt with databases, seeing as I opted to pivot into Game Design and Embedded Systems.
 
-Learning to apply REST queries to C# and C/C++ has been incredibly insightful, as this will give me more opportunities in the future to create, store and manipulate data in new ways, like working with the [Twitch API](https://dev.twitch.tv/docs/api/reference/). While I had some experience using Node RED for Internet of Things development, it was a nice refresher course.
+Learning to apply REST queries to C# and C/C++ has been incredibly insightful, as this will give me more opportunities in the future to create, store and manipulate data in new ways, like working with the [Twitch API](https://dev.twitch.tv/docs/api/reference/). While I had a fair chunk of experience using Node RED for Internet of Things development, it was a nice refresher course.
 
-And finally, the part which I anticipated to actually take the longest, the web application. There's a reason I chose Jekyll for automatically building my website, mainly due to the fact that's it's very easy to just drop in data. With my previous experience, it didn't take long for me to remember the basics, resulting in a faster turn around. I'll probably stick to Single-Page-Applications, but nevertheless it's an interesting foray into creating web applications.
+And finally, the part which I anticipated to actually take the longest, the web application. There's a reason I chose Jekyll for automatically building my website, mainly due to the fact that's it's very easy to just drop in data, without worrying about styling. it didn't take long for me to remember the basics, resulting in a faster turn around. I'll probably stick to Single-Page-Applications, but nevertheless it's an interesting foray into creating web applications.

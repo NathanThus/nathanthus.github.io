@@ -6,7 +6,6 @@ color: primary
 description: Learning about communicating with scientific equipment over VISACOM.
 ---
 
-
 # Learning VISACOM
 
 So, a bit of context is required here. After obtaining my sensors, I wanted to see what the exact characteristics were. The joystick doesn't actually have a proper datasheet, detailing it's behaviour under load. While I could fairly assume it's two potentiometers slapped together, it's better to measure.

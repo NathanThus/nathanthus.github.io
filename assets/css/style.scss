@@ -6,7 +6,7 @@ table a { color: #ff0000 !important; }
 th  { background-color: #3f3f3f !important; }
 .markdown-body a:not(.btn):not([class^="carousel-"]):not([class^="list-"]):not(.no-underline):hover { color: #ff0000 !important; }
 .markdown-body a:not(.btn):not([class^="carousel-"]):not([class^="list-"]):not(.no-underline)::after { background: #ff0000 !important;}
-
+.post-metadata .tag:hover {background-color: #a00101 !important;}
 
 @import "portfolYOU";
 
