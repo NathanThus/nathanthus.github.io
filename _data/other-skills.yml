@@ -5,3 +5,11 @@
 - name: GitHub/GitLab
   percentage: 100
   color: 
+
+- name: Trello/Monday.com/Github Projects
+  percentage: 100
+  color: 
+
+- name: Node RED
+  percentage: 70
+  color: 
