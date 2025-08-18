@@ -6,7 +6,7 @@ color: secondary
 description: Learning about databases, REST API's and Single-Page-Application on the web.
 ---
 
-# The Concept
+## The Concept
 
 The goal for this project is fairly simple. I want to create a database, with accompanying embedded and web-application, to practice my skills in these fields, alongside expanding my knowledge into REST API's. The database will consist of two tables, one which contains random values, while the other contains actual weather data gathered from a sensor. It's been a bit since I last worked with fullstack development, and most of my experience came from Entity Framework, MariaDB and MVC.
 
