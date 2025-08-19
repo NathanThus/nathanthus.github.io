@@ -1,5 +1,5 @@
 ---
-title: Creating A Web Application
+title: A Refresher in Fullstack
 tags: [Embedded, C++, C#, React, SQL, POSTGRES, Learning]
 style: fill
 color: secondary
