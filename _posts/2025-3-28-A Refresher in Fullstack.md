@@ -95,7 +95,7 @@ using (StringContent stringContent = new StringContent
 }
 ```
 
-With some help from my good old friend `WinForm`, this game me this lovely little application:
+With some help from my good old friend `WinForm`, this gave me this lovely little application:
 
 ![A Winform showing JSON data being sent.](../assets/Articles/WebApp/CSharpClientSuccess.png)
 
