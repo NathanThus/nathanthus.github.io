@@ -61,7 +61,7 @@ Running the code now greeted me with this lovely window:
 
 One last aspect to test before I can conclude this little experiment, is the use of asynchronous code, and how that affects testing. During development, I opt to make use of [UniTask](https://github.com/Cysharp/UniTask), rather than use Unity's built in `Coroutines`. This is primarily due to the garbage collection, but there's enough problems with it that it would warrant an entire post by itself. It's fine for most projects, but I like to go that little step further at no additional cost.
 
-So, to test this, I had to create a mechanic that relied on timing first. As the `Health` script would be used by both player and foe alike, it would be fine to add a regenertation mechanic, that requires an explicit toggle on.
+So, to test this, I had to create a mechanic that relied on timing first. As the `Health` script would be used by both player and foe alike, it would be fine to add a regeneration mechanic, that requires an explicit toggle on.
 
 Now, one key issue arrives. While for the most part, asynchronous code follows the same patterns, code that is intended for gameplay does differ in one **key** way in my experience, namely a lack of `Tasks`. These `Tasks` act as the callback (a reminder that the system was busy) for the function, and provide a clean exit point for the function to continue where it left off. That's not exactly the case here, where instead, the system runs in the background occasionally ticking the health value up at it's leisure.
 
